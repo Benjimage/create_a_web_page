@@ -1,0 +1,13 @@
+const inDom ="body";
+const byId ="getElementById(id)
+/*const element = prompt('Entrez le nom de l'élément entre '')
+On peut imaginer un seul bouton : créer un élement*/
+
+function addElement(element,class,att,value,method,id) {
+    const newElement = document.createElement(element)
+    newElement.classList.add(class)
+    newElement.setAttribute(att,value)
+    document.${method}.appendChild(element)
+}
+
+addElement()
