@@ -1,0 +1,78 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+h1 {
+    margin: 40px 0 20px 0;
+}
+h1, h2, h3{
+    text-align: center;
+}
+button {
+    margin: 0 4px;
+    padding: 4px 12px;
+}
+p, li {
+    text-align: left;
+}
+section{
+    padding: 20px;
+}
+.command{
+    display: flex;
+    justify-content: center;
+}
+.new-section {
+    width: 100vw;
+    height: 70vh;
+    background-color: bisque;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.conteneur{
+    width: 60%;
+    height: 60%;
+    background-color: #fff;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.new-div {
+    width: 80%;
+    min-height: 10%;
+    background-color: #fff;
+    border: 1px solid #0000004a;
+    border-radius: 12px;
+    margin: 10px;
+    padding:4px 20px;
+}
+.up {
+    position: absolute;
+    top:10px;
+}
+.sub {
+    position: absolute;
+    top: 60px;
+}
+.list {
+    padding: 10px 20px;
+}
+.vignette{
+    height:16%;
+    margin: 8px;
+    position: absolute;
+    top:80px;
+}
+.surprise {
+    position: absolute;
+    bottom: 20px;
+}
+.nb {
+    filter: grayscale(100%)
+}

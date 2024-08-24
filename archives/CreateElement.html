@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>The Document Object</h1>
+<h2>The createElement() Method</h2>
+
+<p>Create a p element with some text:</p>
+<button type="btn" onclick="addParagraph()">Add a paragraph</button>
+<div id="target" 
+style="
+width:60%; 
+height: 60px; 
+margin:40px auto;
+border: 1px solid #000; 
+border-radius:12px; 
+display: flex;
+align-items: center;
+justify-content: center;">
+</div>
+<script>
+function addParagraph(){
+// Create element:
+const para = document.createElement("p");
+para.innerText = "This is the new paragraph.";
+
+// Append to body:
+document.getElementById('target').appendChild(para);
+}
+</script>
+
+</body>
+</html>
+
