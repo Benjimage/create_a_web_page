@@ -76,3 +76,6 @@ section{
 .nb {
     filter: grayscale(100%)
 }
+.none {
+    display:none;
+}
