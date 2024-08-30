@@ -28,7 +28,7 @@ subtitle .addEventListener('click', ()=> {addTextElement(1,"h3", "sub", ".conten
 paragraph.addEventListener('click', ()=> {addTextElement(2,"p", null, ".new-div")})
 list.addEventListener('click', addList)
 button.addEventListener('click',addButton)
-size.addEventListener('click', ()=>{changeElement('.conteneur','height','88%')}) //document.querySelector('.conteneur').style.height = "88%"
+size.addEventListener('click', ()=>{changeElement('.conteneur','height','100%')}) 
 img.addEventListener('click', addImg)
 typo.addEventListener('click',()=>{changeElement('h1','font-family',"Edu NSW ACT Foundation, cursive")})
 typo.addEventListener('click',()=>{changeElement('h1','font-size',"4rem")})
@@ -55,11 +55,7 @@ function addElement(element,classe,selector) {
     newElement.classList.add(classe)
     document.querySelector(selector).appendChild(newElement)
 }
-/* function addElement(element,classe,selector) {
-    const newElement = create(element)
-    newElement.classList.add(classe)
-    insertElement(selector,element)
-} */
+
 function addTextElement(index,element,classe,selector) {
     userInput = prompt (message[index]); 
     const newElement = document.createElement(element)
@@ -79,17 +75,11 @@ function addButton() {
     userInput = prompt(message[4])
     newButton.innerText = userInput
     newButton.setAttribute("type","button")
+    newButton.setAttribute("id","couleur")
     newButton.addEventListener('click', ()=> {changeElement('.new-section', "background-color","#004a7f")})
     document.querySelector(".conteneur").appendChild(newButton)
 }
-/* function addButton() {
-    const newElement = create("button")
-    userInput = prompt(message[4])
-    newElement.innerText = userInput
-    newElement.setAttribute("type","button")
-    newElement.addEventListener('click', ()=> {changeElement('.new-section', "background-color","#004a7f")})
-    insertElement(".conteneur", newElement);
-} */
+
 function changeElement(selector,property,value){
    document.querySelector(selector).style.setProperty(property,value);
 }
@@ -103,53 +93,17 @@ function addImg() {
 }
 function fonctionSurprise(){
     changeElement('.new-div','display','none')
-    changeElement('button','display','none')
+    changeElement('#couleur','display','none')
     const vignette = document.querySelector('.vignette')
     vignette.src='images/bou.png' 
-    vignette.style.height = "120px"
+    vignette.style.height = "180px"
     vignette.classList.remove('nb')
     document.querySelector('.sub').style.display = "none"
     document.querySelector('p').style.display = "none"
     document.querySelector('.list').style.display = "none"
-    /* let newStyle = document.querySelector('img')
-    newStyle.classList.replace('nb','') */
+    
     let newTitle = document.querySelector(".up")
     newTitle.innerText = "Ha ha ha ha ha !!!"
 }
 
-function create(element){document.createElement(element)} 
-function insertElement(selector,element){document.querySelector(selector).appendChild(element)}
-/* function create(element){
-    userInput = prompt('entrer')
-    document.createElement(`"${userInput}"`)
-} */
 
-
-/*DRAFT*/
-/* function changeElement(selector,property,value){
-    let change = `document.querySelector("${selector}").style.${property} = "${value}";`
-    console.log(selector)
-    console.log(property)
-    console.log(value)
-    console.log(change)
-    return change
-} */
-/* function changeColor(){
-    document.querySelector('.new-section').style.backgroundColor = "#004a7f"
-} */
-/* function addButton() {
-    userInput = prompt (message[4]);
-    addElement("button", null,".conteneur")
-    let btn = document.querySelector(".conteneur").innerText = userInput;
-    btn.setAttribute("type","button")
-    btn.addEventListener('click',changeColor)
-}
-function changeColor(){
-    document.getElementById('main-section').style.backgroundColor = "#004a7f"
-} */
-   /*Pour récupérer la fonctionnalité générale, le code daft.js est fonctionnel : 
-   ---> basculer depuis index.html vers la source fonctionnelle*/
-   //element.addEventListener('click', ()=> {addElement("", "", "")})
-   /* console.log(element)
-    console.log(classe)
-    console.log(selector) */
